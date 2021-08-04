@@ -16,9 +16,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/BluePrism', {
     useCreateIndex: true,
 });
 
-app.get('/', (req, res )=> {
-    res.send('Server is ready');
-});
 
 
 app.use('/api', userRouter);
@@ -36,6 +33,11 @@ if(process.env.NODE_ENV === 'production'){
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
       });
+}else {
+    app.get('/', (req, res )=> {
+    res.send('Server is ready');
+});
+
 }
 // eslint-disable-next-line no-undef
 const port = process.env.PORT || 5000;
