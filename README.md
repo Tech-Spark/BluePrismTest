@@ -32,4 +32,5 @@ Schedule Table component:
 I sent a get request to the endpoint http://localhost:3000/api/schedulesLog  and get all available schedules from the server. And Filter it by name to display on the table section accordingly. 
 
 Header component: 
+
 When you click on the menu bar top right corner of the header it will open dropdown menu. By selecting the name you can filter the schedule cards to show the schedules for specific team member. I could implement that by filtering the collection. If it true the app will change the state and only show that.  
